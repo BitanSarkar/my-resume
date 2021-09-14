@@ -1,0 +1,34 @@
+.jumbo_header {
+  margin-top: 0px;
+  background-image: url(https://wallpaperaccess.com/full/175967.jpg);
+  height: 270px;
+  width: 2000px;
+  display: inline-flex;
+}
+.my_image {
+  width: 200px;
+  border-style: double;
+  border-width: 5px;
+  border-color: rgb(236, 236, 236);
+  border-bottom-left-radius: 75px;
+  border-bottom-right-radius: 75px;
+}
+.my_image_row {
+  padding-top: 50px;
+  margin-left: 50px;
+}
+.details_row {
+  margin-top: 50px;
+  margin-bottom: auto;
+  margin-left: 20%;
+}
+.name {
+  font-size: 48px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+.description{
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
