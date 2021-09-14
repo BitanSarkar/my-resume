@@ -1,9 +1,46 @@
+.App {
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(228, 228, 228);
+}
+.outerBox {
+  padding-top: 50px;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-around;
+}
+.name-header {
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+  color:rgb(90, 90, 90);
+}
+.links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: inline-flex;
+  justify-content: space-around;
+}
+.links li {
+  padding-left: 20px;
+}
+.mah-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  width: 60%;
+}
 .jumbo_header {
   margin-top: 0px;
   background-image: url(https://wallpaperaccess.com/full/175967.jpg);
   height: 270px;
-  width: 2000px;
   display: inline-flex;
+  width: 100%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 20px;
 }
 .my_image {
   width: 200px;
@@ -25,10 +62,12 @@
 .name {
   font-size: 48px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 300;
   color: white;
 }
 .description{
   font-size: 18px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: white;
+  font-weight: 100;
 }

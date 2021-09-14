@@ -1,0 +1,7 @@
+.links_ {
+    color: black;
+}
+a:hover {
+    color: black;
+    box-sizing: content-box;
+}
