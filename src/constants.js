@@ -5,3 +5,5 @@ export const GITHUB = "github";
 export const GITHUB_LINK = "https://github.com/BitanSarkar";
 export const LINKEDIN = "linkedIn";
 export const LINKEDIN_LINK = "https://www.linkedin.com/in/bitan-sarkar-338065162/";
+export const MY_PHOTO_LINK = "https://i.ibb.co/CH7vHfN/myPhoto.png";
+export const SERVER_PDF_LINK = "";
