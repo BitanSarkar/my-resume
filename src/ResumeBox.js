@@ -1,22 +1,27 @@
-import html2canvas from "html2canvas";
-import jsPDF from "jspdf";
+import { savePDF } from "@progress/kendo-react-pdf/dist/es/savePDF";
+import { useState } from "react";
 import { ABOUT_ME, ABOUT_ME_HEAD, ADDRESS, ADDRESS_HEADER, AGE_HEADER, description, DOB_YEAR, EMAIL, EMAIL_HEADER, firstname, lastname, MY_PHOTO_LINK, PHONE, PHONE_HEADER, SERVER_PDF_LINK, SKILLS_HEADER } from "./constants";
-const printDocument = () =>  {
-	const input = document.getElementById('print');
-	console.log(input);
-	html2canvas(input)
-		.then((canvas) => {
-			console.log(canvas);
-			const imgData = canvas.toDataURL('image/png');
-			window.open(imgData)
-			const pdf = new jsPDF();
-			pdf.addImage(imgData, 'PNG', 0, 0);
-			// pdf.output('dataurlnewwindow');
-			pdf.save("download.pdf");
-		})
-	;
-}
+
+
 const ResumeBox = () => {
+  const [remove, setRemove] = useState(false);
+  const printDocument = () =>  {
+    setRemove(true)
+    setTimeout(()=>{
+      const input = document.getElementById('print');
+      savePDF(input, { 
+        paperSize: 'A4',
+        fileName: firstname+"_"+lastname + '_resume.pdf',
+        scale: 0.67,
+        author: firstname+" "+lastname,
+        creator: firstname+" "+lastname,
+        title: firstname+ "'s Resume",
+        date: new Date()
+      });
+    },500);
+    setTimeout(()=>{setRemove(false)},1000) 
+    
+  }
     return <>
     <div className="mah-container"><div id="print">
         <div className="jumbo_header">
@@ -26,8 +31,8 @@ const ResumeBox = () => {
           <div className="details_row">
             <div className="name">{firstname} {lastname}</div>
             <div className="description">{description}</div>
-            <a className="btn btn-light text-dark shadow-sm mt-4 me-4 download" href={SERVER_PDF_LINK} target="_blank" rel="noreferrer">Download CV</a>
-            <button className="btn btn-success shadow-sm mt-4 ml-4 hire" href="#contact" onClick={printDocument}>Hire Me</button>
+            <button className={"btn btn-light text-dark shadow-sm mt-4 me-4 download"+(remove?"remove":"")} id="download" onClick={printDocument}>Download CV</button>
+            <button className={"btn btn-success shadow-sm mt-4 ml-4 hire"+(remove?"remove":"")} id="contactDetails" href="#contact" >Hire Me</button>
           </div>
         </div>
         <div className="mah-resume">

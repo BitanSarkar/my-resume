@@ -76,8 +76,14 @@
 .btn.download {
   border-radius: 50px;
 }
+.btn.downloadremove {
+  display: none;
+}
 .btn.hire {
   border-radius: 50px;
+}
+.btn.hireremove {
+  display: none;
 }
 .mah-resume {
   background-color: white;
