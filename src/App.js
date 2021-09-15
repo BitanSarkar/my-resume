@@ -1,11 +1,18 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import Resume from './Resume';
 const App = () =>  {
   return (
-    <div className="App">
-      <Resume/>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/">
+            <Resume/>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

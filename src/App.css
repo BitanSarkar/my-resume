@@ -2,7 +2,7 @@
   justify-items: center;
   justify-content: center;
   align-items: center;
-  background-color: rgb(228, 228, 228);
+  margin-bottom: 100px;
 }
 .outerBox {
   padding-top: 50px;
@@ -34,6 +34,14 @@
   border-radius: 30px;
   background-color: white;
 }
+.mah-container_ {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 80%;
+  border-radius: 30px;
+  background-color: white;
+}
 .jumbo_header {
   margin-top: 0px;
   background-image: url(./images/175967.jpg);
@@ -42,6 +50,14 @@
   width: 100%;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
+  box-shadow: 0rem -1rem 3rem 0px rgb(0 0 0 / 50%);
+}
+.jumbo_header_ {
+  margin-top: 0px;
+  background-image: url(./images/175967.jpg);
+  height: 270px;
+  display: inline-flex;
+  width: 100%;
   box-shadow: 0rem -1rem 3rem 0px rgb(0 0 0 / 50%);
 }
 .my_image {
@@ -91,6 +107,10 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
+.mah-resume_ {
+  background-color: white;
+  box-shadow: 0px 1rem 3rem 1px rgb(0 0 0 / 50%);
+}
 .row .aboutme h2 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: 400;
@@ -99,5 +119,22 @@
   margin-top: 5%;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.contactdetails {
+.skill {
+  width: 95%;
+  justify-content: end;
 }
+#contact_none {
+  display: none;
+}
+
+.timeline{border-left:2px solid #e6e9ed;padding:1rem 0}
+.timeline-card{position:relative;margin-left:31px;border-left:2px solid;margin-bottom:2rem}
+.timeline-card:last-child{margin-bottom:1rem}
+.timeline-card:before{content:'';display:inline-block;position:absolute;background-color:#fff;border-radius:10px;width:12px;height:12px;top:20px;left:-41px;border:2px solid;z-index:2}
+.timeline-card:after{content:'';display:inline-block;position:absolute;background-color:currentColor;width:29px;height:2px;top:25px;left:-29px;z-index:1}
+.timeline-card-primary{border-left-color:#4a89dc !important}
+.timeline-card-primary:before{border-color:#4a89dc}
+.timeline-card-primary:after{background-color:#4a89dc}
+.timeline-card-success{border-left-color:#37bc9b !important}
+.timeline-card-success:before{border-color:#37bc9b}
+.timeline-card-success:after{background-color:#37bc9b}
