@@ -25,7 +25,7 @@ const ResumeBox = () => {
       const input = document.getElementById('print');
       savePDF(input, { 
         paperSize: 'A4',
-        fileName: firstname+"_"+lastname+year+(month>9?"":"0")+month+day+'_resume.pdf',
+        fileName: firstname+"_"+lastname+year+(month>8?"":"0")+(month+1)+day+'_resume.pdf',
         scale: 0.583,
         author: firstname+" "+lastname,
         creator: firstname+" "+lastname,
