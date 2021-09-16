@@ -84,28 +84,28 @@ const ResumeBox = () => {
             <div className="col-2"></div>
             <div className="col-5 contactdetails mt-4">
               <div className="row mt-4">
-                  <div className="col-6">{AGE_HEADER}</div>
-                  <div className="col-6">{date.getFullYear() - DOB_YEAR}</div>
+                  <div className="col-3">{AGE_HEADER}</div>
+                  <div className="col-9">{date.getFullYear() - DOB_YEAR}</div>
               </div>
               <div className="row mt-2">
-                  <div className="col-6">{EMAIL_HEADER}</div>
-                  <div className="col-6">
+                  <div className="col-3">{EMAIL_HEADER}</div>
+                  <div className="col-9">
                       {EMAIL.map(x=>{
                           return <div>{x}</div>
                       })}
                   </div>
               </div>
               <div className="row mt-2">
-                  <div className="col-6">{PHONE_HEADER}</div>
-                  <div className="col-6">
+                  <div className="col-3">{PHONE_HEADER}</div>
+                  <div className="col-9">
                   {PHONE.map(x=>{
                           return <div>{x}</div>
                       })}
                   </div>
               </div>
               <div className="row mt-2">
-                  <div className="col-6">{ADDRESS_HEADER}</div>
-                  <div className="col-6">
+                  <div className="col-3">{ADDRESS_HEADER}</div>
+                  <div className="col-9">
                     {ADDRESS.map(x=>{
                         return <p align="justify">{x}</p>
                     })}
