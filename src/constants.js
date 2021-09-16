@@ -123,3 +123,6 @@ export const EDU_EXP =
     },
 ];
 export const EDU_HEAD = "Education";
+export const USER_ID = "user_lbaar5IJ4QVM6Y3vxm7lX";
+export const SERVICE_ID = "service_93mau0k";
+export const TEMPLATE_ID = "template_kkiouao";

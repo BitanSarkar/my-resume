@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 import EduExp from "./components/EduExp";
 import Progress from "./components/Progress";
 import WorkExp from "./components/WorkExp";
-import { ABOUT_ME, ABOUT_ME_HEAD, ADDRESS, ADDRESS_HEADER, AGE_HEADER, description, DOB_YEAR, EDU_EXP, EDU_HEAD, EMAIL, EMAIL_HEADER, firstname, lastname, LEFT_SKILLS, MY_PHOTO_LINK, PHONE, PHONE_HEADER, RIGHT_SKILLS, SKILLS_HEADER, WORK_EXP, WORK_EXP_HEAD } from "./constants";
+import { ABOUT_ME, ABOUT_ME_HEAD, ADDRESS, ADDRESS_HEADER, AGE_HEADER, description, DOB_YEAR, EDU_EXP, EDU_HEAD, EMAIL, EMAIL_HEADER, firstname, lastname, LEFT_SKILLS, MY_PHOTO_LINK, PHONE, PHONE_HEADER, RIGHT_SKILLS, SERVICE_ID, SKILLS_HEADER, TEMPLATE_ID, USER_ID, WORK_EXP, WORK_EXP_HEAD } from "./constants";
 import useWindowDimensions from "./WindowDim";
 
 
@@ -38,12 +38,17 @@ const ResumeBox = () => {
   
   const handleSubmit = (event) => {
     event.preventDefault();
-    init("user_lbaar5IJ4QVM6Y3vxm7lX");
-    emailjs.sendForm('service_93mau0k','template_kkiouao',event.target,"user_lbaar5IJ4QVM6Y3vxm7lX")
+    init(USER_ID);
+    emailjs.sendForm(SERVICE_ID,TEMPLATE_ID,event.target,USER_ID)
     .then(resp => {
       if(resp.status===200){
         setDisplay(false);
         history.push("/")
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+        alert(firstname + ", got an email from you. He will contanct you shortly");
       }
     },
     (error) => {
