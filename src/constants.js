@@ -39,6 +39,10 @@ export const LEFT_SKILLS =
         skill: "Typescript",
         level: 75
     },
+    {
+        skill: "AWS Cloud",
+        level: 65
+    },
     
 ];
 export const RIGHT_SKILLS = 
@@ -52,7 +56,7 @@ export const RIGHT_SKILLS =
         level: 95
     },
     {
-        skill: "MySQL/Postgres",
+        skill: "Postgres",
         level: 80
     },
     {
@@ -65,6 +69,10 @@ export const RIGHT_SKILLS =
     },
     {
         skill: "Python3",
+        level: 80
+    },
+    {
+        skill: "Redis",
         level: 80
     },
     {
